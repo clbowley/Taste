@@ -7,6 +7,8 @@
 
 	<link rel="shortcut icon" href="{% static '/static/images/favicon.ico' %}">
 	<link rel="stylesheet" href="{% static '/static/css/style.css' %}">
+	<link rel="stylesheet" href="{% static '/static/css/swipebox.css' %}">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
 	{% block header %}
 	<title>{% block title %}Taste / Grid{% endblock %}</title>
@@ -21,6 +23,7 @@
 	{% block scripts %}
 	<script src="//code.jquery.com/jquery.min.js"></script>
 	<script src="{% static '/static/js/main.js' %}"></script>
+	<script src="{% static '/static/js/jquery.swipebox.js' %}"></script>
 	{% endblock scripts%}
 </body>
 </html>

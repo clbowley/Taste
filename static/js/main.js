@@ -1,16 +1,25 @@
-var keySize = false;
-var numTiles = 300;
+var keySize = true;
+var numTiles = 30;
 var tall = 3;
 var wide = 3;
 
+var lowbarClosed = 55;
+var lowbarOpen = 400;
+
+function windowHeight() {
+
+}
+
 function pop() {
 	for (var i = 0; i < numTiles; i++) {
-		$("#wrapper").append("<div class='tile'><h3 class='grey-10'>"+(i+1)+"</h3></div>");
+		var number = i+1;
+		$("#wrapper").append("<div class=\"tile\"><a href=\"static/images/yosoyel.jpg\" class=\"swipebox\"><img src=\"static/images/yosoyel.jpg\"/></a><h3 class='grey-10'>"+number+"</h3></div>");
 		// if(i == (tall * wide)-1) { 
 		// 	$(".tile").last().addClass("last-tile");
 		// }
 	}
 	setSize();
+	$(".swipebox").swipebox();
 }
 
 function reset() {
@@ -20,14 +29,31 @@ function reset() {
 }
 
 function setSize() {
-	var height = ($(window).height() - $('.manifesto').height()) / tall;
-	var width = $(window).width() / wide;
-	$(".tile").css("height", height).css("width", width);
+
+	var windowHeight = $(window).height();
+	var windowWidth = $(window).width();
+
+	$("#wrapper").css("height", windowHeight - lowbarClosed);
+
+	var tileHeight =  $("#wrapper").height() / tall;
+	// var height = ($(window).height() - $('.manifesto').height()) / tall;
+
+	var tileWidth = $("#wrapper").width() / wide;
+
+	$(".tile").css("height", tileHeight).css("width", tileWidth);
+	$(".lowbar").css("height", tileHeight).css("bottom", -tileHeight+55);
+
 }
 
 $(document).ready(function() {
+
 	pop();
 	setSize();
+
+
+	$(".lowbar").click(function() {
+  		$(this).toggleClass( "open" );
+	});
 
 	if(keySize == true) {
 
