@@ -1,0 +1,141 @@
+$grey: rgba(0,0,0,0.2);
+$grey-80: rgba(0,0,0,0.8);
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0} 
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.group:before,
+.group:before,
+.group:after { content: ""; display: table;} 
+.group:after { clear: both;}
+.group { zoom: 1;}
+
+body {
+	font:16px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
+	-webkit-font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+	height: 100%;
+	color:#777;
+}
+
+p {
+	line-height:1.8;
+}
+
+strong {
+	font-weight: 500;
+	color: #444;
+}
+
+a {
+	text-decoration:none;
+	color:#5badf0;
+}
+
+#wrapper {
+	margin:0 auto;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Link to Documentation */
+a#documentation {
+	position: fixed; top: 11px; right: 9px;
+	background: #5badf0; color: #fff;
+	padding: 8px 12px;
+	font-size: 13px; font-weight: 600; line-height: 1.35;
+	border-radius: 3px; z-index: 100;
+}
+
+/* Horizontally and vertically centers the text */
+.center {
+	margin: 0 auto;
+	padding:0 40px 0 40px;
+	max-width:600px;
+	position: relative; top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	
+}
+
+.absoluteCenter {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/* Typography */
+
+
+h1 {
+	font-size: 4em;
+	line-height: 95px;
+}
+
+h3 {
+	padding: 16px;
+	font-size: 1.6em;
+	font-weight: 200;
+}
+
+/* Color */
+
+.grey-10 {
+	color: rgba(0,0,0,0.1);
+}
+
+/* Tile Grid */
+
+.tile {
+	background-color: $grey;
+	width: 20%;
+	height: 200px;
+	float: left;
+	border: 1px solid $grey;
+	transition: background-color 0.5s, box-shadow 0.5s;
+	-webkit-transition: background-color 0.5s, box-shadow 0.5s; /* Safari */
+}
+
+.tile:hover {
+	background-color: rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+	transition: background-color 0.5s, box-shadow 0.5s;
+	-webkit-transition: background-color 0.5s, box-shadow 0.5s; /* Safari */
+}
+
+.last-tile {
+	background-color: $grey-80 !important;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+}
+
+#message {
+	z-index: 500;
+	width: 400px;
+	height: 100px;
+	position: fixed !important;
+	text-align: center;
+}
+
+.manifesto {
+	position: fixed;
+	background-color: $grey-80;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	text-align: center;
+}
+
+/* Mobile */
+
+@media only screen and (max-device-width: 480px) {
+
+	h1 {
+		font-size: 2em;
+	}
+
+}
