@@ -1,22 +1,15 @@
 var keySize = true;
-var numTiles = 30;
+var numTiles = 40;
 var tall = 3;
-var wide = 3;
+var wide = 4;
 
 var lowbarClosed = 55;
 var lowbarOpen = 400;
-
-function windowHeight() {
-
-}
 
 function pop() {
 	for (var i = 0; i < numTiles; i++) {
 		var number = i+1;
 		$("#wrapper").append("<div class=\"tile\"><a href=\"static/images/yosoyel.jpg\" class=\"swipebox\"><img src=\"static/images/yosoyel.jpg\"/></a><h3 class='grey-10'>"+number+"</h3></div>");
-		// if(i == (tall * wide)-1) { 
-		// 	$(".tile").last().addClass("last-tile");
-		// }
 	}
 	setSize();
 	$(".swipebox").swipebox();
@@ -41,19 +34,21 @@ function setSize() {
 	var tileWidth = $("#wrapper").width() / wide;
 
 	$(".tile").css("height", tileHeight).css("width", tileWidth);
-	$(".lowbar").css("height", tileHeight).css("bottom", -tileHeight+55);
+	$(".lowbar").css("height", (tileHeight*2 + 55)).css("bottom", (-$(".lowbar").height() + lowbarClosed));
+	$("#logo").css("top", tileHeight + 40);
 
 }
+
+
+
+function toggleManifesto() {
+		$(".lowbar, #logo, #message h1").toggleClass( "open" );
+};
 
 $(document).ready(function() {
 
 	pop();
 	setSize();
-
-
-	$(".lowbar").click(function() {
-  		$(this).toggleClass( "open" );
-	});
 
 	if(keySize == true) {
 

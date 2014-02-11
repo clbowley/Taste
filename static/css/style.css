@@ -102,26 +102,36 @@ a#documentation {
 /* Typography */
 #logo {
   margin: auto;
-  top: -55px;
-  bottom: 0;
+  top: 300px;
   left: 40px;
   position: fixed;
   width: 52px;
   height: 232px;
-  -webkit-transition: left 0.7s; }
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  #logo.open {
+    top: 30px !important; }
+
+h1, h2, h3, h4 {
+  margin-top: 0; }
 
 h1 {
-  font-size: 4em;
-  line-height: 95px; }
+  font-size: 7em; }
+
+h2 {
+  font-size: 2em;
+  margin: .5em 0; }
+
+h3 {
+  font-size: 2em;
+  font-weight: 600; }
 
 .oswald {
   text-transform: uppercase;
   font-family: "oswald", arial, sans-serif;
-  font-weight: 200; }
-
-h3 {
-  padding: 16px;
-  font-size: 1.6em;
   font-weight: 200; }
 
 #swipelogo {
@@ -140,7 +150,6 @@ h3 {
   width: 20%;
   height: 200px;
   float: left;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   transition: background-color 1s, box-shadow 0.5s;
   -webkit-transition: background-color 1s, box-shadow 0.5s;
   /* Safari */
@@ -150,7 +159,6 @@ h3 {
 .tile:hover {
   opacity: 0.8;
   background-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   transition: background-color 0.5s, box-shadow 0.5s;
   -webkit-transition: background-color 0.5s, box-shadow 0.5s;
   /* Safari */ }
@@ -161,11 +169,11 @@ h3 {
   webkit-transition: 0.5s;
   width: 100%;
   position: relative;
-  top: -60px; }
+  top: -90px; }
 
 .tile img:hover {
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
   transition: 0.5s;
   -webkit-transition: 0.5s; }
 
@@ -177,33 +185,85 @@ h3 {
 
 #message {
   z-index: 500;
-  width: 400px;
+  width: 700px;
   height: 100px;
   position: fixed !important;
-  text-align: center; }
+  text-align: center;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); }
+
+#message h1 {
+  line-height: 45px;
+  font-size: 7em;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  #message h1:hover {
+    color: #00c2f2;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
 
 .lowbar {
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
   position: fixed;
   background-color: #00c2f2;
   width: 100%;
-  bottom: -245px;
+  bottom: -307px;
   left: 0;
   z-index: 1000;
   text-align: center;
   height: 300px;
-  transition: bottom 0.7s; }
-
-.lowbar.open {
-  bottom: 0px !important;
-  transition: bottom 0.7s; }
-
-.lowbar #hashtag {
-  float: left;
-  color: #FFF;
-  position: relative;
-  top: 18px;
-  left: 40px;
-  font-size: 1.3em; }
+  transition: bottom 0.7s;
+  color: white;
+  cursor: pointer; }
+  .lowbar .upper {
+    height: 60px;
+    padding-top: 10px; }
+  .lowbar .manifesto {
+    position: relative;
+    top: 200px;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+    border: 2px solid #FFF;
+    padding: 50px 30px; }
+    .lowbar .manifesto p {
+      font-size: 0.9em;
+      margin-bottom: 1em; }
+  .lowbar .btn.read {
+    opacity: 1.0;
+    border: 2px solid #FFF;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    font-weight: 400;
+    border-radius: 30px;
+    padding: 0.2em 1em;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .lowbar .btn.read:hover {
+      color: #00c2f2;
+      background-color: #FFF; }
+  .lowbar.open {
+    cursor: default;
+    bottom: 0px !important; }
+    .lowbar.open .manifesto {
+      top: -50px; }
+    .lowbar.open .btn.read {
+      opacity: 0.0; }
 
 .top {
   z-index: 99999; }

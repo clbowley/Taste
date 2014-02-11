@@ -18,7 +18,8 @@
 			hideBarsDelay : 3000,
 			videoMaxWidth : 1140,
 			vimeoColor : 'CCCCCC',
-			beforeOpen: null,
+			beforeOpen: function()
+				{ console.log("hello")}, 
 		      	afterClose: null
 		},
 		
@@ -33,7 +34,7 @@
 		winHeight = window.innerHeight ? window.innerHeight : $(window).height(),
 		html = '<div id="swipebox-overlay">\
 				<div id="swipebox-slider"></div>\
-				<div id="swipelogo"><h1 class="oswald">#tastematters</h1></div>\
+				<div id="swipelogo"><h2 class="oswald">#tastematters</h2></div>\
 				<div id="swipebox-action">\
 					<a id="swipebox-close"></a>\
 					<a id="swipebox-prev"></a>\
