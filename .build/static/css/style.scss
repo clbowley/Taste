@@ -1,4 +1,5 @@
 $grey-20: rgba(0,0,0,0.2);
+$grey-40: rgba(0,0,0,0.4);
 $grey-80: rgba(0,0,0,0.8);
 $soma-blue: #00c2f2;
 
@@ -26,7 +27,7 @@ body {
 	text-rendering:optimizeLegibility;
 	height: 100%;
 	color:#777;
-	background-color: #222;
+	background-color: #FFF;
 }
 
 p {
@@ -113,10 +114,22 @@ h3 {
 	font-weight: 600;
 }
 
+h4 {
+	font-size: 0.7em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	font-weight: 600;
+}
+
 .oswald {
 	text-transform: uppercase;
 	font-family: "oswald", arial, sans-serif;
 	font-weight: 200;
+}
+
+.text-col-2 {
+	column-count: 2;
+	-webkit-column-count: 2;
 }
 
 
@@ -128,6 +141,10 @@ h3 {
 
 .white {
 	color: #FFF;
+}
+
+.blue {
+	color: $soma-blue;
 }
 
 .grey-10 {
@@ -189,9 +206,9 @@ h3 {
 }
 
 #message h1 {
-	line-height: 45px;
 	font-size: 7em;
 	cursor: pointer;
+	margin-bottom: 20px;
 	@include transition(0.3s);
 
 	&:hover {
@@ -200,12 +217,35 @@ h3 {
 	}
 }
 
+/* Buttons */
+
+	
+.btn.read {
+	opacity: 1.0;
+	border: 2px solid #FFF;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	font-weight: 400;
+	border-radius: 30px;
+	padding: 0.2em 1em;
+	@include transition(0.3s);
+
+	&.on {
+		color: $soma-blue;
+		background-color: #FFF;
+	}
+
+	&:hover {
+		
+	}
+}
 
 
+/* Panels */
 
 
 .lowbar {
-	@include transition(0.7s);
+	@include transition(2s);
 	position: fixed;
 	background-color: $soma-blue;
 	width: 100%;
@@ -213,10 +253,11 @@ h3 {
 	left: 0;
 	z-index: 1000;
 	text-align: center;
-	height: 300px;
+	min-height: 300px;
 	transition: bottom 0.7s;
 	color: white;
 	cursor: pointer;
+	padding-top: 0;
 
 	.upper {
 		
@@ -225,52 +266,71 @@ h3 {
 
 	}
 
-	.manifesto { 
-		position: relative;
-		top: 200px;
-		@include transition(0.7s);
-		border: 2px solid #FFF;
-		padding: 50px 30px;
+	.manifesto {
+		background-color: white;
 
-		p {
-			font-size: 0.9em;
+		.vignette {
+			box-shadow: inset 0 0 40px #F00;			
+		}
+
+		.copy {
+			color: $grey-40;
+			overflow: scroll;
+			max-height: 400px;
+
+			p {
+			line-height: 2em;
+			font-size: 1.4em;
 			margin-bottom: 1em;
+			}
 		}
 	}
 	
-	.btn.read {
-		opacity: 1.0;
-		border: 2px solid #FFF;
-		font-size: 1.1em;
-		letter-spacing: 1px;
-		font-weight: 400;
-		border-radius: 30px;
-		padding: 0.2em 1em;
-		@include transition(0.3s);
+	.contest {
+		background-color: $soma-blue;
+		height: 100%;
+	}
 
-		&:hover {
-			color: $soma-blue;
-			background-color: #FFF;
-		}
+	.title {
+		padding-top: 10px;
+		margin-bottom: 30px;
+		font-size: 2em;
+		@include transition(0.3s);
+	}
+
+	.btn {
+		position: relative;
+		top: -3px;
+		margin: 0 4px;
+	}
+
+	.cta {
+		font-size: 18px;
+		@include transition(0.3s);
 	}
 
 	&.open {
 
 		cursor: default;
-		
 		bottom: 0px !important;
 
-		.manifesto {
-			top: -50px;
+		.title {
+			padding-top: 60px;
+			font-size: 4em;
 		}
 		
-		.btn.read {
-			opacity: 0.0;
+		.cta {
+			-webkit-opacity: 0.0;
 		}
 	}
 
 }
 
+
+.full-height {
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+}
 
 .top {
 	z-index: 99999;

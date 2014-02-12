@@ -93,16 +93,15 @@ html.swipebox {
 }
 
 #swipebox-action, #swipebox-caption {
-/*  position: absolute;
+  position: absolute;
   left: 0;
   z-index: 999;
   height: 50px;
-  width: 100%;*/
-  display: none;
+  width: 100%;
 }
 
 #swipebox-action {
-  bottom: -50px;
+  top: -50px;
 }
 #swipebox-action.visible-bars {
   bottom: 0;

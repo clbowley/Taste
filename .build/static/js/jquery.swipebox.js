@@ -19,7 +19,10 @@
 			videoMaxWidth : 1140,
 			vimeoColor : 'CCCCCC',
 			beforeOpen: function()
-				{ console.log("hello")}, 
+				{ if ($(".lowbar").hasClass("open")) {
+					toggleManifesto()
+					}
+				}, 
 		      	afterClose: null
 		},
 		
@@ -395,7 +398,7 @@
 					});
 				}
 
-				$('#swipebox-close').bind('click touchend', function(e){
+				$('.slide').bind('click touchend', function(e){
 					$this.closeSlide();
 				});
 			},

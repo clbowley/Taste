@@ -45,7 +45,7 @@ body {
   text-rendering: optimizeLegibility;
   height: 100%;
   color: #777;
-  background-color: #222; }
+  background-color: #FFF; }
 
 p {
   line-height: 1.8; }
@@ -129,10 +129,20 @@ h3 {
   font-size: 2em;
   font-weight: 600; }
 
+h4 {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-weight: 600; }
+
 .oswald {
   text-transform: uppercase;
   font-family: "oswald", arial, sans-serif;
   font-weight: 200; }
+
+.text-col-2 {
+  column-count: 2;
+  -webkit-column-count: 2; }
 
 #swipelogo {
   text-align: center; }
@@ -140,6 +150,9 @@ h3 {
 /* Color */
 .white {
   color: #FFF; }
+
+.blue {
+  color: #00c2f2; }
 
 .grey-10 {
   color: rgba(0, 0, 0, 0.1); }
@@ -192,9 +205,9 @@ h3 {
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); }
 
 #message h1 {
-  line-height: 45px;
   font-size: 7em;
   cursor: pointer;
+  margin-bottom: 20px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
@@ -208,12 +221,31 @@ h3 {
     -o-transition: 0.3s;
     transition: 0.3s; }
 
+/* Buttons */
+.btn.read {
+  opacity: 1.0;
+  border: 2px solid #FFF;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  font-weight: 400;
+  border-radius: 30px;
+  padding: 0.2em 1em;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .btn.read.on {
+    color: #00c2f2;
+    background-color: #FFF; }
+
+/* Panels */
 .lowbar {
-  -webkit-transition: 0.7s;
-  -moz-transition: 0.7s;
-  -ms-transition: 0.7s;
-  -o-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
   position: fixed;
   background-color: #00c2f2;
   width: 100%;
@@ -221,49 +253,61 @@ h3 {
   left: 0;
   z-index: 1000;
   text-align: center;
-  height: 300px;
+  min-height: 300px;
   transition: bottom 0.7s;
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-top: 0; }
   .lowbar .upper {
     height: 60px;
     padding-top: 10px; }
   .lowbar .manifesto {
-    position: relative;
-    top: 200px;
-    -webkit-transition: 0.7s;
-    -moz-transition: 0.7s;
-    -ms-transition: 0.7s;
-    -o-transition: 0.7s;
-    transition: 0.7s;
-    border: 2px solid #FFF;
-    padding: 50px 30px; }
-    .lowbar .manifesto p {
-      font-size: 0.9em;
-      margin-bottom: 1em; }
-  .lowbar .btn.read {
-    opacity: 1.0;
-    border: 2px solid #FFF;
-    font-size: 1.1em;
-    letter-spacing: 1px;
-    font-weight: 400;
-    border-radius: 30px;
-    padding: 0.2em 1em;
+    background-color: white; }
+    .lowbar .manifesto .vignette {
+      box-shadow: inset 0 0 40px #F00; }
+    .lowbar .manifesto .copy {
+      color: rgba(0, 0, 0, 0.4);
+      overflow: scroll;
+      max-height: 400px; }
+      .lowbar .manifesto .copy p {
+        line-height: 2em;
+        font-size: 1.4em;
+        margin-bottom: 1em; }
+  .lowbar .contest {
+    background-color: #00c2f2;
+    height: 100%; }
+  .lowbar .title {
+    padding-top: 10px;
+    margin-bottom: 30px;
+    font-size: 2em;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; }
-    .lowbar .btn.read:hover {
-      color: #00c2f2;
-      background-color: #FFF; }
+  .lowbar .btn {
+    position: relative;
+    top: -3px;
+    margin: 0 4px; }
+  .lowbar .cta {
+    font-size: 18px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
   .lowbar.open {
     cursor: default;
     bottom: 0px !important; }
-    .lowbar.open .manifesto {
-      top: -50px; }
-    .lowbar.open .btn.read {
-      opacity: 0.0; }
+    .lowbar.open .title {
+      padding-top: 60px;
+      font-size: 4em; }
+    .lowbar.open .cta {
+      -webkit-opacity: 0.0; }
+
+.full-height {
+  margin-bottom: -9999px;
+  padding-bottom: 9999px; }
 
 .top {
   z-index: 99999; }

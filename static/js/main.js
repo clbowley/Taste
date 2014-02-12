@@ -1,10 +1,9 @@
-var keySize = true;
+var keySize = false;
 var numTiles = 40;
 var tall = 3;
-var wide = 4;
+var wide = 3;
 
 var lowbarClosed = 55;
-var lowbarOpen = 400;
 
 function pop() {
 	for (var i = 0; i < numTiles; i++) {
@@ -34,7 +33,7 @@ function setSize() {
 	var tileWidth = $("#wrapper").width() / wide;
 
 	$(".tile").css("height", tileHeight).css("width", tileWidth);
-	$(".lowbar").css("height", (tileHeight*2 + 55)).css("bottom", (-$(".lowbar").height() + lowbarClosed));
+	$(".lowbar").css("min-height", (tileHeight*2 + 55)).css("bottom", (-$(".lowbar").height() + lowbarClosed));
 	$("#logo").css("top", tileHeight + 40);
 
 }
@@ -88,7 +87,7 @@ $(document).ready(function() {
 				break;
 
 				default: 
-				console.log("borked");
+				return
 			}
 		})
 	}
