@@ -1,48 +1,60 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div id="message" class="absoluteCenter">
-		<h1 class="oswald white" onclick="toggleManifesto();">#tastematters</h1>
-
-		
+<div id="vignette">
+	<div id="message">
+			<h1 class="oswald blue fittext" onclick="toggleManifesto();">What is <span class="box">taste</span>?</h1>
+			
+			
+		</div>
+	<div id="wrapper container-fluid">
+		<div id="logo" class="top" onclick="toggleManifesto();"><img src="static/images/intro-logo@2x.png" width="52" height="232"/></div>
+		<div id="tiles" class="row">
+			<div class="tile col-md-3 solid intro disabled"><h1 class="oswald fittext">Taste<br>Matters.</h1><h2 class="oswald ">But what is taste? We asked some remarkable friends. </h2></div>
+			<!-- <div class="tile col-md-3 featured"><h2 class="oswald">Carafe.</h2></div> -->
+		</div>
 	</div>
-<div id="wrapper">
-<div id="logo" class="top" onclick="toggleManifesto();"><img src="static/images/intro-logo@2x.png" width="52" height="232"/></div>
-	
-</div>
-<div class="highbar top container-fluid" onclick="toggleContent();"></div>
-<div class="lowbar top container-fluid" onclick="toggleManifesto();">
-	<div class="row">
-		<div class="col-md-6 manifesto full-height">
-			<h1 class="blue oswald title">Read the Manifesto</h1>
-			<div class="row">
-			<div class="vignette">
-					<div class="col-md-8 col-md-offset-2 copy">
-								<h2>Taste. Everyone's got it.</h2>
-								<p>From those old ladies who rock enormously round glasses to connoisseurs of ramen.</p>
-								<p>At Soma, we salute all 10,000 taste buds on your tongue. The ones that make your synapses dance when you sip something delicious.</p>
-								<p>We toast the taste buds in your brain, that feed your passion for those beautifully designed objects we all collect, covet and fill our Pinterest boards with.</p>
-								<p>And we tip our tweed fedora to the taste buds in your heart; the ones that tingle when you’re doing something good for others.</p>
-								<p>At Soma, we celebrate all dimensions of taste, because taste shapes who you are.</p>
-								<p>May your taste lead you on amazing adventures everyday.</p>
-								<h2>Raise your glass.</h2>
-								<p>The Soma Team</p>
+	<div class="lowbar top container-fluid">
+		<div id="tiles" class="row">
+			<div class="col-md-6 manifesto full-height">
+				<h1 class="blue oswald title" onclick="toggleManifesto()"><!-- <i class="fa fa-file-text-o"></i> --> The Taste Manifesto</h1>
+				<div class="row">
+						<div class="col-md-8 col-md-offset-2 copy">
+									<!-- <h4>the taste manifesto</h4> -->
+									<h2>Taste. Everyone's got it.</h2>
+									<p>From those old ladies who rock enormously round glasses to connoisseurs of ramen.</p>
+									<p>At Soma, we salute all 10,000 taste buds on your tongue. The ones that make your synapses dance when you sip something delicious.</p>
+									<p>We toast the taste buds in your brain, that feed your passion for those beautifully designed objects we all collect, covet and fill our Pinterest boards with.</p>
+									<p>And we tip our tweed fedora to the taste buds in your heart; the ones that tingle when you’re doing something good for others.</p>
+									<p>At Soma, we celebrate all dimensions of taste, because taste shapes who you are.</p>
+									<p>May your taste lead you on amazing adventures everyday.</p>
+									<h2>Raise your glass.</h2>
+									<p>- The Soma Team</p>
+						</div>
+				</div>
+				<span class="arrow-down"></span>
+			</div>
+			<!-- <div class="col-md-2 share full-height"><h1 class="white oswald title" onclick="toggleManifesto()">Share</h1></div> -->
+			<div class="col-md-6 contest full-height">
+				<h1 class="white oswald title" onclick="toggleManifesto()"><!-- <i class="fa fa-trophy"></i> -->Flaunt your taste</h1>
+				<div id="lowbar-close" class="white" onclick="toggleManifesto()"><i class="fa fa-times"></i></div>
+				<div class="col-md-8 col-md-offset-2 copy">
+					<div class="spaceball"></div>
+					<p>Join us on our taste inspired adventure. Just Tweet / Instagram to</p>
+					<h2 class="oswald">#tastematters</h2>
+					<div class="row">
+						<div class="signup col-md-6 col-md-offset-3">
+							<form id="newsletter_signup_form" class="form-horizontal" action="">
+								<fieldset>
+									<div class="form-group">
+										<input type="email" class="form-control" placeholder="Enter your email"><button type="submit" class="btn btn-subscribe oswald">apply now</button>
+									</div>
+								</fieldset>
+							</form>
+							<div id="newsletter_signup_confirm" style="display:none;"><p>You're in! Thanks for signing up. Head <a href="http://drinksoma.com">home.</a></p></div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="col-md-6 contest full-height">
-			<h1 class="white oswald title">Enter to Win</h1>
-			<div class="col-md-8 col-md-offset-2 copy">
-				<h2>Join us on our taste inspired adventure:</h2>
-				<form id="newsletter_signup_form" class="form-horizontal" action="">
-					<fieldset>
-						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Enter your email"><button type="submit" class="btn btn-subscribe">JOIN NOW</button>
-						</div>
-					</fieldset>
-				</form>
-				<div id="newsletter_signup_confirm" style="display:none;"><p>You're in! Thanks for signing up. Head <a href="http://drinksoma.com">home.</a></p></div>
 			</div>
 		</div>
 	</div>

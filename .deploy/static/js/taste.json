@@ -1,0 +1,26 @@
+[
+{
+"name": "Mike Del Ponte",
+"title": "Founder, Soma Water",
+"quote": "Integrity.",
+"link": null,
+"filename": "carsonbowley.jpg",
+"featured": false
+},
+{
+"name": "Troy Barber",
+"title": "MilkmanSF",
+"quote": "Ever evolving.",
+"link": null,
+"filename": "carsonbowley.jpg",
+"featured": false
+},
+{
+"name": "Jessie Jacobs",
+"title": "Founder, Samovar Tea Lounge",
+"quote": "Living life as a work of art.",
+"link": null,
+"filename": "carsonbowley.jpg",
+"featured": true
+}
+]

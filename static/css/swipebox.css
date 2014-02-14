@@ -12,7 +12,7 @@ html.swipebox {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000!important;
+  z-index: 5000;
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -31,14 +31,13 @@ html.swipebox {
 }
 
 #swipebox-slider .slide {
-  background: url("../images/loader.gif") no-repeat center center;
+ /* background: url("../images/loader.gif") no-repeat center center;*/
   height: 100%;
   width: 100%;
   line-height: 1px;
-  text-align: center;
+  /*text-align: center;*/
   display: inline-block;
-  padding-top: 95px;
-  padding-bottom: 70px;
+  /*padding: 120px 60px 90px;*/
 }
 
 #swipebox-slider .slide:before {
@@ -52,17 +51,10 @@ html.swipebox {
 #swipebox-slider .slide img,
 #swipebox-slider .slide .swipebox-video-container {
   display: inline-block;
-  max-height: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  width: auto;
+  /*max-height: 100%;*/
+  /*max-width: 100%;*/
   height: auto;
   vertical-align: middle;
-  box-shadow: 0px 0px 20px #666;
-  -webkit-box-shadow: 0px 0px 20px #666;
-  -moz-box-shadow: 0px 0px 20px #666;
-  -o-box-shadow: 0px 0px 20px #666;
 }
 
 #swipebox-slider .slide .swipebox-video-container {
@@ -70,7 +62,6 @@ html.swipebox {
   max-width: 1140px;
   max-height: 100%;
   width: 100%;
-  padding:5%;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -92,7 +83,7 @@ html.swipebox {
   top: 0; left: 0;
 }
 
-#swipebox-action, #swipebox-caption {
+/*#swipebox-action, #swipebox-caption {
   position: absolute;
   left: 0;
   z-index: 999;
@@ -112,9 +103,9 @@ html.swipebox {
 }
 
 #swipebox-caption {
-  top: -50px;
   text-align: center;
 }
+
 #swipebox-caption.visible-bars {
   top: 0;
 }
@@ -149,7 +140,7 @@ html.swipebox {
 #swipebox-action #swipebox-next {
   background-position: -78px 13px;
   right: 40px;
-}
+}*/
 
 #swipebox-action #swipebox-prev.disabled,
 #swipebox-action #swipebox-next.disabled {
@@ -158,13 +149,13 @@ html.swipebox {
 }
 
 #swipebox-slider.rightSpring {
-  -moz-animation: rightSpring 0.3s;
-  -webkit-animation: rightSpring 0.3s;
+  -moz-animation: rightSpring 1.0s;
+  -webkit-animation: rightSpring 1.0s;
 }
 
 #swipebox-slider.leftSpring {
-  -moz-animation: leftSpring 0.3s;
-  -webkit-animation: leftSpring 0.3s;
+  -moz-animation: leftSpring 1.0s;
+  -webkit-animation: leftSpring 1.0s;
 }
 
 @-moz-keyframes rightSpring {
@@ -240,11 +231,8 @@ html.swipebox {
 
 /* Skin 
 --------------------------*/
-#swipebox-overlay {
-  background: rgba(255,255,255,0.9);
-}
 
-#swipebox-action, #swipebox-caption {
+/*#swipebox-action, #swipebox-caption {
   text-shadow: 1px 1px 1px black;
   background-color: #0d0d0d;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0d0d0d), color-stop(100%, #000000));
@@ -254,7 +242,7 @@ html.swipebox {
   background-image: linear-gradient(#0d0d0d, #000000);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
   opacity: 0.95;
-}
+}*/
 
 #swipebox-action {
   border-top: 1px solid rgba(255, 255, 255, 0.2);

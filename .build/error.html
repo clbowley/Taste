@@ -10,14 +10,44 @@
 	<link rel="stylesheet" href="/static/css/style.css">
 	<link rel="stylesheet" href="/static/css/swipebox.css">
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	
 
 	
 	<title>Taste / Grid</title>
 	
 
+	<meta property="og:title" content="Taste Matters." />
+	<meta property="og:type" content="video" />
+	<meta property="og:url" content="www.drinksoma.com" />
+	<meta property="og:description" content="Taste shapes us. We are celebrating taste and you. Show us yours on instagram and facebook." />
+	<meta property="og:image" content="http://tastematters.s3-website-us-east-1.amazonaws.com/static/images/people/yosoyel.jpg" />
+
+
+
+
 </head>
 <body>
+
+ 	<div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '535150003205088',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 	
 <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
@@ -41,11 +71,13 @@
 </p>
 
 
+
 	
 	<script src="//code.jquery.com/jquery.min.js"></script>
 	<script src="/static/js/main.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 	<script src="/static/js/jquery.swipebox.js"></script>
+	<script src="/static/js/jquery.fittext.js"></script>
 	
 </body>
 </html>

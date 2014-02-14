@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/css/style.css">
+	<link rel="stylesheet" href="/static/css/swipebox.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	
+
+	
+	<title>Taste / Grid</title>
+	
+
+	<meta property="og:title" content="Taste Matters." />
+	<meta property="og:type" content="video" />
+	<meta property="og:url" content="www.drinksoma.com" />
+	<meta property="og:description" content="Taste shapes us. We are celebrating taste and you. Show us yours on instagram and facebook." />
+	<meta property="og:image" content="http://tastematters.s3-website-us-east-1.amazonaws.com/static/images/people/yosoyel.jpg" />
+
+
+
+
+</head>
+<body>
+
+ 	<div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '535150003205088',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+	
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		
+		// Add the missing url to the text
+		$("#url").text(window.location.pathname);
+		
+		// Fix the css locations dynamically
+		$("head link").each(function() {
+			for (var i=0; i<window.location.pathname.split(/\//g).length-2; i++)
+				$(this).attr("href", "../" + $(this).attr("href"));
+		});
+		
+	})
+</script>
+
+<p>
+	Sorry the page <b id="url"></b> could not be found on this server.
+</p>
+
+
+
+	
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="/static/js/jquery.swipebox.js"></script>
+	
+</body>
+</html>

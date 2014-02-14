@@ -1,0 +1,98 @@
+[
+{
+"name": "Mike Del Ponte",
+"title": "Founder, Soma Water",
+"quote": "Integrity.",
+"link": null,
+"filename": "sample_a.jpg",
+"featured": false
+},
+{
+"name": "Troy Barber",
+"title": "MilkmanSF",
+"quote": "Ever evolving.",
+"link": null,
+"filename": "sample_b.jpg",
+"featured": false
+},
+{
+"name": "Gene Wilderbury",
+"title": "Professional Cat Sitter",
+"quote": "Never having to say you're sorry.",
+"link": null,
+"filename": "sample_c.jpg",
+"featured": false
+},
+{
+"name": "Dean Wilkinson",
+"title": "Skateboarder",
+"quote": "a knack for heelflips.",
+"link": null,
+"filename": "sample_d.jpg",
+"featured": false
+},
+{
+"name": "Jim & Jaynie Jacobson",
+"title": "Smirk Enthusiasts",
+"quote": "Remembering to put the seat down.",
+"link": null,
+"filename": "sample_e.jpg",
+"featured": false
+},
+{
+"name": "Tom Cott & James Whifferson",
+"title": "Hip Librarians",
+"quote": "Never forgetting where you left the keys.",
+"link": null,
+"filename": "sample_f.jpg",
+"featured": false
+},
+{
+"name": "Shimmy Twostep",
+"title": "Aeronautical Engineer",
+"quote": "Defying gravity.",
+"link": null,
+"filename": "sample_g.jpg",
+"featured": false
+},
+{
+"name": "Little Jimmy Fiddlesticks",
+"title": "Fledgling Saboteur",
+"quote": "Walking softly and carrying a giant sign.",
+"link": null,
+"filename": "sample_h.jpg",
+"featured": false
+},
+{
+"name": "Troy Barber",
+"title": "MilkmanSF",
+"quote": "Ever evolving.",
+"link": null,
+"filename": "sample_i.jpg",
+"featured": false
+},
+{
+"name": "Troy Barber",
+"title": "MilkmanSF",
+"quote": "Ever evolving.",
+"link": null,
+"filename": "sample_j.jpg",
+"featured": false
+},
+{
+"name": "Troy Barber",
+"title": "MilkmanSF",
+"quote": "Ever evolving.",
+"link": null,
+"filename": "sample_k.jpg",
+"featured": false
+},
+{
+"name": "Jessie Jacobs",
+"title": "Founder, Samovar Tea Lounge",
+"quote": "Living life as a work of art.",
+"link": null,
+"filename": "sample_l.jpg",
+"featured": true
+}
+]

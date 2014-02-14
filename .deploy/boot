@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/css/style.css">
+	<link rel="stylesheet" href="/static/css/swipebox.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+	
+
+	
+	<title>Taste / Grid</title>
+	
+
+	<meta property="og:title" content="Taste Matters." />
+	<meta property="og:type" content="video" />
+	<meta property="og:url" content="www.drinksoma.com" />
+	<meta property="og:description" content="Taste shapes us. We are celebrating taste and you. Show us yours on instagram and facebook." />
+	<meta property="og:image" content="http://tastematters.s3-website-us-east-1.amazonaws.com/static/images/people/yosoyel.jpg" />
+
+
+
+
+</head>
+<body>
+
+ 	<div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '535150003205088',
+          status     : true,
+          xfbml      : true
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+	
+<div id="message" class="absoluteCenter">
+		<h1 class="oswald white" onclick="toggleManifesto();">#tastematters</h1>
+
+		
+	</div>
+<div id="wrapper">
+<div id="logo" class="top" onclick="toggleManifesto();"><img src="static/images/intro-logo@2x.png" width="52" height="232"/></div>
+	
+</div>
+<div class="highbar top container-fluid" onclick="toggleContent();"></div>
+<div class="lowbar top container-fluid" onclick="toggleManifesto();">
+	<div class="row">
+		<div class="col-md-6 manifesto full-height">
+			<h1 class="blue oswald title">Read the Manifesto</h1>
+			<div class="row">
+			<div class="vignette">
+					<div class="col-md-8 col-md-offset-2 copy">
+								<h2>Taste. Everyone's got it.</h2>
+								<p>From those old ladies who rock enormously round glasses to connoisseurs of ramen.</p>
+								<p>At Soma, we salute all 10,000 taste buds on your tongue. The ones that make your synapses dance when you sip something delicious.</p>
+								<p>We toast the taste buds in your brain, that feed your passion for those beautifully designed objects we all collect, covet and fill our Pinterest boards with.</p>
+								<p>And we tip our tweed fedora to the taste buds in your heart; the ones that tingle when you’re doing something good for others.</p>
+								<p>At Soma, we celebrate all dimensions of taste, because taste shapes who you are.</p>
+								<p>May your taste lead you on amazing adventures everyday.</p>
+								<h2>Raise your glass.</h2>
+								<p>The Soma Team</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 contest full-height">
+			<h1 class="white oswald title">Enter to Win</h1>
+			<div class="col-md-8 col-md-offset-2 copy">
+				<h2>Join us on our taste inspired adventure:</h2>
+				<form id="newsletter_signup_form" class="form-horizontal" action="">
+					<fieldset>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Enter your email"><button type="submit" class="btn btn-subscribe">JOIN NOW</button>
+						</div>
+					</fieldset>
+				</form>
+				<div id="newsletter_signup_confirm" style="display:none;"><p>You're in! Thanks for signing up. Head <a href="http://drinksoma.com">home.</a></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class='lowbar top'><h2 id="hashtag" class="oswald">#tastematters</h2><h3 class='grey-80'>Taste is a way of life.</h3></div> -->
+
+
+
+	
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="/static/js/jquery.swipebox.js"></script>
+	
+</body>
+</html>

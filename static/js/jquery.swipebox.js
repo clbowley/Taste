@@ -29,19 +29,20 @@
 		plugin = this,
 		elements = [], // slides array [{href:'...', title:'...'}, ...],
 		elem = elem,
-		selector = elem.selector,
-		$selector = $(selector),
+		selector = elem.selector,		$selector = $(selector),
 		isTouch = document.createTouch !== undefined || ('ontouchstart' in window) || ('onmsgesturechange' in window) || navigator.msMaxTouchPoints,
 		supportSVG = !!(window.SVGSVGElement),
 		winWidth = window.innerWidth ? window.innerWidth : $(window).width(),
 		winHeight = window.innerHeight ? window.innerHeight : $(window).height(),
 		html = '<div id="swipebox-overlay">\
-				<div id="swipebox-slider"></div>\
-				<div id="swipelogo"><h2 class="oswald">#tastematters</h2></div>\
+					<div id="swipebox-slider"></div>\
+					<div id="caption">\
+						<div id="caption-wrap" class="center">\
+						</div></div>\
 				<div id="swipebox-action">\
-					<a id="swipebox-close"></a>\
-					<a id="swipebox-prev"></a>\
-					<a id="swipebox-next"></a>\
+					<a id="swipebox-close"><i class="fa fa-th"></i></a>\
+					<a id="swipebox-prev"><i class="fa fa-chevron-left"></i></a>\
+					<a id="swipebox-next"><i class="fa fa-chevron-right"></i></a>\
 				</div>\
 		</div>';
 
@@ -59,7 +60,7 @@
 
 			}else{
 
-				$selector.click(function(e){
+				plugin.setupElements = function(e) {
 					elements = [];
 					var index , relType, relVal;
 
@@ -76,24 +77,39 @@
 
 					$elem.each(function(){
 
-						var title = null, href = null;
+						var name = null, title = null, quote = null, href = null;
+
+						if( $(this).attr('data-name') )
+							name = $(this).data('name');
+
+						if( $(this).attr('data-title') )
+							title = $(this).data('title');
 						
-						if( $(this).attr('title') )
-							title = $(this).attr('title');
+						if( $(this).attr('data-quote') )
+							quote = $(this).data('quote');
 
 						if( $(this).attr('href') )
 							href = $(this).attr('href');
 
 						elements.push({
+							name: name,
+							title: title,
+							quote: quote,
 							href: href,
-							title: title
 						});
 					});
 					
 					index = $elem.index($(this));
-					e.preventDefault();
-					e.stopPropagation();
-					ui.target = $(e.target);
+					if (e) {
+						e.preventDefault();
+						e.stopPropagation();
+						ui.target = $(e.target);
+					}
+					return index;
+				}
+
+				$selector.click(function(e){
+					var index = plugin.setupElements.apply(this, [e]);
 					ui.init(index);
 				});
 			}
@@ -105,6 +121,11 @@
 				$elem = $(selector);
 				ui.actions();
 			}
+		}
+
+		plugin.openSlide = function(index) {
+			ui.target = $(window);
+			ui.init(index);
 		}
 
 		var ui = {
@@ -122,6 +143,9 @@
 			},
 
 			build : function(){
+
+				console.log("building swipebox");
+
 				var $this = this;
 
 				$('body').append(html);
@@ -396,14 +420,22 @@
 						$this.getNext();
 						$this.setTimeout();
 					});
+
+					$('#swipebox-close').bind('click touchend', function(e){
+						e.preventDefault();
+						e.stopPropagation();
+						$this.closeSlide();
+						$this.setTimeout();
+					});
+
 				}
 
-				$('.slide').bind('click touchend', function(e){
-					$this.closeSlide();
-				});
 			},
 			
 			setSlide : function (index, isFirst){
+
+				sethash(index);
+
 				isFirst = isFirst || false;
 				
 				var slider = $('#swipebox-slider');
@@ -418,6 +450,11 @@
 				$('#swipebox-slider .slide').eq(index).addClass('current');
 				this.setTitle(index);
 
+
+				
+
+				if(window.fbAsyncInit.hasRun) { FB.XFBML.parse(document.getElementById('caption')) };
+
 				if( isFirst ){
 					slider.fadeIn();
 				}
@@ -425,7 +462,7 @@
 				$('#swipebox-prev, #swipebox-next').removeClass('disabled');
 				if(index == 0){
 					$('#swipebox-prev').addClass('disabled');
-				}else if( index == elements.length - 1 ){
+				}else if( index == elements.length - 1 ){7
 					$('#swipebox-next').addClass('disabled');
 				}
 			},
@@ -472,16 +509,20 @@
 			},
 
 			setTitle : function (index, isFirst){
-				var title = null;
+				var _title = elements[index].title;
+				var _name = elements[index].name;
+				var _quote = elements[index].quote;
+				var _share = '<a href="https://www.facebook.com/sharer/sharer.php?u=http://tastematters.s3-website-us-east-1.amazonaws.com/#'+hashTile+'" target="_blank">Share on Facebook</a>';
+				var _share2 = '<div class="fb-share-button" data-href="http://tastematters.s3-website-us-east-1.amazonaws.com/#'+ hashTile +'" data-width="300" data-layout="button"></div>';
+				$('#caption-wrap').empty();
 
-				$('#swipebox-caption').empty();
+				console.log(_share2);
 
 				if( elements[index] !== undefined )
-					title = elements[index].title;
-				
-				if(title){
-					$('#swipebox-caption').append(title);
-				}
+					// $('#caption').append('<div class="fb-share-button" data-href="http://tastematters.s3-website-us-east-1.amazonaws.com/#'+ hashTile +'" data-width="300" data-layout="button"></div><h2 class=\"name\">'+_name+'</h2><h3 class=\"title\">'+_title+'</h3><p class=\"quote\">'+_quote+'</p>');
+
+					$('#caption-wrap').append('<h4 class="tasteis blue oswald">Taste<h4> is<h2 class=\"quote blue oswald\">'+_quote+'</h2><h3 class=\"name\">'+_name+'</h3><p class=\"title\">'+_title+'</p>');
+					
 			},
 
 			isVideo : function (src){
