@@ -232,7 +232,7 @@ a#documentation {
       -o-transition: 0.5s;
       transition: 0.5s; }
   #tiles .tile.featured {
-    opacity: 0.6; }
+    opacity: 1.0; }
   #tiles .tile.solid {
     -webkit-opacity: 1;
     -moz-opacity: 1;

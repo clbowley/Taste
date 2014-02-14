@@ -29,9 +29,9 @@ function getPeople(callback) {
 	        	var title = this.title;
 	        	var quote = this.quote;
 	        	var link = (this.link) ? this.link : url;
-	        	var featured = this.featured;
+	        	var featured = (this.featured) ? 'featured' : '' ;
 
-	            $('#tiles').append('<div class=\"tile col-'+ breakpoint +'-'+(12/wide)+'\"><a href=\"'+link+'\" class="swipebox" data-name="'+this.name+'" data-title="'+this.title+'" data-quote="'+this.quote+'" title=\"'+name+'\" onclick=\"sethash('+index+')\"><img src=\"'+url+'\"/></a></div>');
+	            $('#tiles').append('<div class=\"tile '+ featured +' col-'+ breakpoint +'-'+(12/wide)+'\"><a href=\"'+link+'\" class="swipebox" data-name="'+this.name+'" data-title="'+this.title+'" data-quote="'+this.quote+'" title=\"'+name+'\" onclick=\"sethash('+index+')\"><img src=\"'+url+'\"/></a></div>');
 	            
 	        });
 
@@ -114,7 +114,7 @@ $(window).resize(function() {
 $(document).ready(function() {
 
 	// $("#message .fittext").fitText(0.5);
-	$("#message .fittext").fitText(1.2, { minFontSize: '2em', maxFontSize: '90px' });
+	$("#message .fittext").fitText(1.2, { minFontSize: '2em', maxFontSize: '120px' });
 
 	// Get the party started
 	getPeople(function() {

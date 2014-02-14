@@ -152,11 +152,11 @@
 
 				if($this.doCssTrans()){
 					$('#swipebox-slider').css({
-						'-webkit-transition' : 'left 0.4s ease',
-						'-moz-transition' : 'left 0.4s ease',
-						'-o-transition' : 'left 0.4s ease',
-						'-khtml-transition' : 'left 0.4s ease',
-						'transition' : 'left 0.4s ease'
+						'-webkit-transition' : 'left 0.7s ease',
+						'-moz-transition' : 'left 0.7s ease',
+						'-o-transition' : 'left 0.7s ease',
+						'-khtml-transition' : 'left 0.7s ease',
+						'transition' : 'left 0.7s ease'
 					});
 					$('#swipebox-overlay').css({
 						'-webkit-transition' : 'opacity 1s ease',

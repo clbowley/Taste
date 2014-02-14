@@ -10,10 +10,10 @@
 {
 "name": "Troy Barber",
 "title": "MilkmanSF",
-"quote": "Ever evolving.",
+"quote": "How you feel wearing it.",
 "link": null,
 "filename": "sample_b.jpg",
-"featured": false
+"featured": true
 },
 {
 "name": "Gene Wilderbury",
@@ -29,7 +29,7 @@
 "quote": "a knack for heelflips.",
 "link": null,
 "filename": "sample_d.jpg",
-"featured": false
+"featured": true
 },
 {
 "name": "Jim & Jaynie Jacobson",
@@ -42,7 +42,7 @@
 {
 "name": "Tom Cott & James Whifferson",
 "title": "Hip Librarians",
-"quote": "Never forgetting where you left the keys.",
+"quote": "Never losing the keys.",
 "link": null,
 "filename": "sample_f.jpg",
 "featured": false
@@ -69,23 +69,23 @@
 "quote": "Ever evolving.",
 "link": null,
 "filename": "sample_i.jpg",
-"featured": false
+"featured": true
 },
 {
-"name": "Troy Barber",
-"title": "MilkmanSF",
-"quote": "Ever evolving.",
+"name": "Tony Fu",
+"title": "Insect",
+"quote": "A warm gun.",
 "link": null,
 "filename": "sample_j.jpg",
 "featured": false
 },
 {
-"name": "Troy Barber",
-"title": "MilkmanSF",
-"quote": "Ever evolving.",
+"name": "Betsy Goff",
+"title": "Milkmaid",
+"quote": "loving my chiquito perrito.",
 "link": null,
 "filename": "sample_k.jpg",
-"featured": false
+"featured": true
 },
 {
 "name": "Jessie Jacobs",
@@ -93,6 +93,6 @@
 "quote": "Living life as a work of art.",
 "link": null,
 "filename": "sample_l.jpg",
-"featured": true
+"featured": false
 }
 ]
